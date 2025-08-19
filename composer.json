@@ -1,7 +1,6 @@
 {
   "name": "juster/wordpress-vite",
   "description": "A library to properly integrate a Vite workflow into WordPress.",
-  "version": "1.0.0",
   "keywords": [
     "vite",
     "wordpress"
@@ -9,7 +8,7 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "jramard-addviso",
+      "name": "Julien Ramard",
       "email": "jramard@addviso.com"
     }
   ],
@@ -20,7 +19,9 @@
     "friendsofphp/php-cs-fixer": "^3.86",
     "phpstan/phpstan": "^2.1",
     "phpstan/extension-installer": "^1.4",
-    "szepeviktor/phpstan-wordpress": "^2.0"
+    "szepeviktor/phpstan-wordpress": "^2.0",
+    "brainmaestro/composer-git-hooks": "^3.0",
+    "ramsey/conventional-commits": "^1.6"
   },
   "autoload": {
     "psr-4": {
@@ -35,5 +36,21 @@
   "scripts": {
     "format": "./vendor/bin/php-cs-fixer fix src",
     "analyse": "./vendor/bin/phpstan analyse --memory-limit=-1"
+  },
+  "extra": {
+    "hooks": {
+      "config": {
+        "stop-on-failure": [
+          "commit-msg",
+          "pre-commit"
+        ]
+      },
+      "commit-msg": [
+        "./vendor/bin/conventional-commits validate $1"
+      ],
+      "pre-commit": [
+        "composer run format"
+      ]
+    }
   }
 }
