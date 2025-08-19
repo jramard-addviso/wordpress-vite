@@ -18,7 +18,7 @@ if (! function_exists('vite')) {
 if (! function_exists('resolve')) {
     function resolve($path): string
     {
-        return vite()->assets()->resolve($path);
+        return vite()->assets()->resolve("src/$path");
     }
 }
 
@@ -27,8 +27,8 @@ vite();
 if (! function_exists('theme')) {
     function theme(): void
     {
-        vite()->assets()->enqueueStyle('theme', 'styles/main.css');
-        vite()->assets()->enqueueScript('theme', 'scripts/main.js');
+        vite()->assets()->enqueueStyle('theme', 'src/styles/main.css');
+        vite()->assets()->enqueueScript('theme', 'src/scripts/main.js');
     }
 }
 

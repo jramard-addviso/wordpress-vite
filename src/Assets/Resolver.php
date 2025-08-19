@@ -36,8 +36,8 @@ trait Resolver
     {
         $url = '';
 
-        if (! empty($this->manifest["src/{$path}"])) {
-            $url = vite()->config()->get('output') . "/{$this->manifest["src/{$path}"]['file']}";
+        if (! empty($this->manifest[$path])) {
+            $url = vite()->config()->get('output') . "/{$this->manifest[$path]['file']}";
         }
 
         return apply_filters('vite_assets_resolver_url', $url, $path);
@@ -47,8 +47,8 @@ trait Resolver
     {
         $urls = [];
 
-        if (! empty($this->manifest["src/{$path}"])) {
-            if ($stylepaths = $this->manifest["src/{$path}"]['css'] ?? []) {
+        if (! empty($this->manifest[$path])) {
+            if ($stylepaths = $this->manifest[$path]['css'] ?? []) {
                 foreach ($stylepaths as $stylepath) {
                     $url = vite()->config()->get('output') . "/{$stylepath}";
                     $urls[] = apply_filters('vite_assets_resolver_url', $url, $path);

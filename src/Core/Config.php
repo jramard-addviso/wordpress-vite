@@ -18,7 +18,6 @@ class Config
             $hmr = [
               'host' => $vite_hmr_host,
               'client' => $vite_hmr_host . '/@vite/client',
-              'sources' => $vite_hmr_host . '/src',
               'active' => $env !== 'production',
             ];
         }
