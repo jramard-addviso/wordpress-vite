@@ -1,0 +1,27 @@
+.heading {
+  @apply th-heading;
+
+  &.heading--t1 {
+    @apply th-heading--t1;
+  }
+
+  &.heading--t2 {
+    @apply th-heading--t2;
+  }
+
+  &.heading--t3 {
+    @apply th-heading--t3;
+  }
+
+  &.heading--t4 {
+    @apply th-heading--t4;
+  }
+
+  &.heading--t5 {
+    @apply th-heading--t5;
+  }
+
+  &.heading--t6 {
+    @apply th-heading--t6;
+  }
+}

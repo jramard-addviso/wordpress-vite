@@ -1,0 +1,40 @@
+:root {
+  --gutter: 1rem;
+
+  --duration-fast: 150ms;
+
+  @variant sm {
+    --gutter: 2rem;
+  }
+
+  @variant lg {
+    --gutter: 3rem;
+  }
+}
+
+@theme {
+  --color-*: initial;
+  --color-primary-dark: #1f4d37;
+  --color-primary: #007848;
+  --color-primary-light: #3aaa37;
+  --color-primary-lighter: #d6e6d4;
+  --color-beige: #f2ede9;
+  --color-brown: #403a38;
+  --color-dark: #111111;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* --font-*: initial; */
+  --font-body: Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-headline: 'Montserrat Alternates', ui-serif, serif;
+
+  --tracking-*: initial;
+  --tracking-wide: 0.03em;
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+}

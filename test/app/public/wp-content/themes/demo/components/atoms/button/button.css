@@ -1,0 +1,54 @@
+.button {
+  --button-border-width: 1px;
+  --button-border-color: transparent;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: calc(0.75rem - var(--button-border-width));
+  padding-inline: calc(1.25rem - var(--button-border-width));
+  border-width: var(--button-border-width);
+  border-color: var(--button-border-color);
+  border-radius: 0.25rem;
+  background-color: var(--button-bg-color);
+  color: var(--button-color);
+  transition-property: border-color, background-color, color;
+  transition-duration: var(--duration-fast);
+
+  @apply th-label-headline;
+
+  &.button--primary {
+    --button-bg-color: var(--color-primary-light);
+    --button-color: var(--color-white);
+
+    &[disabled] {
+      --button-bg-color: --alpha(var(--color-primary-light) / 50%);
+    }
+
+    @variant hocus {
+      --button-bg-color: var(--color-primary);
+    }
+  }
+
+  &.button--white {
+    --button-bg-color: var(--color-white);
+    --button-color: var(--color-primary);
+
+    @variant hocus {
+      --button-bg-color: var(--color-primary);
+      --button-color: var(--color-white);
+    }
+  }
+
+  &.button--transparent {
+    --button-border-color: currentColor;
+    --button-bg-color: transparent;
+    --button-color: var(--color-primary);
+
+    @variant hocus {
+      --button-border-color: transparent;
+      --button-bg-color: var(--color-primary);
+      --button-color: var(--color-white);
+    }
+  }
+}

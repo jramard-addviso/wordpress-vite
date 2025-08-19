@@ -1,0 +1,96 @@
+.text {
+  --text-spacer: 1.5rem;
+  --text-list-offset: 1.5em;
+  --text-transition-duration: var(--text-transition-duration-override, var(--duration-fast));
+
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+
+  b,
+  strong {
+    font-weight: 700;
+    /* letter-spacing: var(--tracking-wide); */
+  }
+
+  a {
+    text-decoration-line: underline;
+    transition-property: color;
+    transition-duration: var(--duration-fast);
+
+    @variant hocus {
+      color: var(--color-primary);
+    }
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--color-primary-dark);
+
+    @apply th-heading;
+  }
+
+  h1 {
+    @apply th-heading--t1;
+  }
+
+  h2 {
+    @apply th-heading--t2;
+  }
+
+  h3 {
+    @apply th-heading--t3;
+  }
+
+  h4 {
+    @apply th-heading--t4;
+  }
+
+  h5 {
+    @apply th-heading--t5;
+  }
+
+  h6 {
+    @apply th-heading--t6;
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-inline-start: var(--text-list-offset);
+
+      &::before {
+        content: '\2022';
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        width: var(--text-list-offset);
+        text-align: center;
+      }
+    }
+  }
+
+  ol {
+    padding-inline-start: var(--text-list-offset);
+    list-style: decimal;
+  }
+
+  @variant children-not-first {
+    margin-block-start: var(--text-spacer);
+  }
+
+  &.text--lead {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  &.text--transition-opacity {
+    opacity: 0.8;
+    transition-property: opacity;
+    transition-duration: var(--text-transition-duration);
+
+    @variant group-has-hocus {
+      opacity: 1;
+    }
+  }
+}

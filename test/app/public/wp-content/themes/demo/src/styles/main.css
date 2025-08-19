@@ -1,0 +1,17 @@
+@import 'tailwindcss' source('../../');
+
+@import './global/variants.css';
+@import './global/utilities.css';
+
+@layer theme {
+  @import './global/variables.css';
+}
+
+@layer base {
+  @import './global/fonts.css';
+  @import './global/layout.css';
+}
+
+@layer components {
+  @import './components/index.css';
+}

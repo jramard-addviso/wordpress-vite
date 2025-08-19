@@ -1,0 +1,8 @@
+{
+  "name": "juster/wordpress-vite-demo",
+  "autoload": {
+    "psr-4": {
+      "Juster\\WordpressVite\\": "../../src/"
+    }
+  }
+}

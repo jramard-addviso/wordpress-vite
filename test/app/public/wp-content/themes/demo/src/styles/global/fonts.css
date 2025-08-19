@@ -1,0 +1,163 @@
+/* Montserrat Alternates */
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-Thin.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-ThinItalic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-ExtraLight.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-ExtraLightItalic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-Light.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-LightItalic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-Regular.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-Italic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-Medium.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-MediumItalic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-SemiBold.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-SemiBoldItalic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-Bold.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-BoldItalic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-ExtraBold.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-ExtraBoldItalic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-Black.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  src: url('@/assets/fonts/MontserratAlternates/MontserratAlternates-BlackItalic.woff2')
+    format('woff2');
+}

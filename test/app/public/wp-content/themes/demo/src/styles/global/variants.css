@@ -1,0 +1,50 @@
+@custom-variant hocus {
+  @media (hover: hover) {
+    &:hover:is(a, button, input[type='submit'], [tabindex='0']):not(
+        :disabled,
+        .is-disabled,
+        .is-active
+      ),
+    &:focus-visible:not(.is-disabled, .is-active) {
+      @slot;
+    }
+  }
+}
+
+@custom-variant group-hocus {
+  @media (hover: hover) {
+    .group:hover:is(a, button, [tabindex='0']):not(
+        :disabled,
+        .is-disabled,
+        .is-active
+      )
+      &,
+    .group:focus-visible:not(.is-disabled, .is-active) & {
+      @slot;
+    }
+  }
+}
+
+@custom-variant has-hocus {
+  @media (hover: hover) {
+    &:hover:has(a, button, input[type='submit'], [tabindex='0']),
+    &:focus-within {
+      @slot;
+    }
+  }
+}
+
+@custom-variant group-has-hocus {
+  @media (hover: hover) {
+    .group:hover:has(a, button, input[type='submit'], [tabindex='0']) &,
+    .group:focus-within & {
+      @slot;
+    }
+  }
+}
+
+@custom-variant children-not-first {
+  > * + * {
+    @slot;
+  }
+}
