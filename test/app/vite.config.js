@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => ({
       input: [
         resolve(process.cwd(), `${THEME_PATH}/src/scripts/main.js`),
         resolve(process.cwd(), `${THEME_PATH}/src/styles/main.css`),
+        resolve(process.cwd(), `${THEME_PATH}/src/scripts/admin.js`),
       ],
     },
   },

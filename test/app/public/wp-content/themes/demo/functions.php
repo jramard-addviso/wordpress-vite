@@ -31,9 +31,18 @@ if (! function_exists('theme')) {
         vite()->assets()->enqueueScript('theme', 'src/scripts/main.js');
         wp_enqueue_script('external', get_stylesheet_directory_uri() . '/external.js', [], null);
     }
+
+    add_action('wp_enqueue_scripts', 'theme');
 }
 
-add_action('wp_enqueue_scripts', 'theme');
+if (! function_exists('admin')) {
+    function admin(): void
+    {
+        vite()->assets()->enqueueScript('admin', 'src/scripts/admin.js');
+    }
+
+    add_action('admin_enqueue_scripts', 'admin');
+}
 
 /**
  * Prints space separated HTML classes from a given array.

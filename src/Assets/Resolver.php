@@ -8,6 +8,7 @@ trait Resolver
 
     /**
      * @action wp_enqueue_scripts 1
+     * @action admin_enqueue_scripts 1
      */
     public function load(): void
     {
