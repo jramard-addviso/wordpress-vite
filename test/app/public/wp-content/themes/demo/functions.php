@@ -29,6 +29,7 @@ if (! function_exists('theme')) {
     {
         vite()->assets()->enqueueStyle('theme', 'src/styles/main.css');
         vite()->assets()->enqueueScript('theme', 'src/scripts/main.js');
+        wp_enqueue_script('external', get_stylesheet_directory_uri() . '/external.js', [], null);
     }
 }
 

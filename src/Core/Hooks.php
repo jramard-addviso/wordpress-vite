@@ -25,11 +25,11 @@ class Hooks
             if (preg_match_all(self::PATTERN, $method->getDocComment(), $matches, PREG_SET_ORDER)) {
                 foreach ($matches as $match) {
                     $handlers[] = [
-                      'hook' => sprintf('add_%s', $match['type']),
-                      'name' => $match['name'],
-                      'callback' => [$instance, $method->getName()],
-                      'priority' => $match['priority'] ?? 10,
-                      'args' => $method->getNumberOfParameters(),
+                        'hook' => sprintf('add_%s', $match['type']),
+                        'name' => $match['name'],
+                        'callback' => [$instance, $method->getName()],
+                        'priority' => $match['priority'] ?? 10,
+                        'args' => $method->getNumberOfParameters(),
                     ];
                 }
             }

@@ -12,28 +12,25 @@ class Config
         $theme_uri = get_stylesheet_directory_uri();
 
         $vite_config = require $config_path . 'vite.config.php';
-        $vite_hmr_host = self::getViteServer($theme_path);
-
-        if ($vite_hmr_host) {
-            $hmr = [
-              'host' => $vite_hmr_host,
-              'client' => $vite_hmr_host . '/@vite/client',
-              'active' => $env !== 'production',
-            ];
-        }
+        $vite_dev_path = $theme_path . '/.dev';
+        $vite_hmr_host = self::getViteServer($vite_dev_path);
 
         $this->config = [
-          'path' => $theme_path,
-          'uri' => $theme_uri,
-          'output' => $theme_uri . '/dist',
-          'env' => [
-            'type' => $env,
-            'mode' => false === strpos($theme_path, ABSPATH . 'wp-content/plugins') ? 'theme' : 'plugin',
-          ],
-          'hmr' => $hmr ?? false,
-          'manifest' => [
-            'path' => $theme_path . '/dist/' . $vite_config['manifest'],
-          ],
+            'path' => $theme_path,
+            'uri' => $theme_uri,
+            'output' => $theme_uri . '/dist',
+            'env' => [
+                'type' => $env,
+                'mode' => false === strpos($theme_path, ABSPATH . 'wp-content/plugins') ? 'theme' : 'plugin',
+            ],
+            'hmr' => [
+                'host' => $vite_hmr_host,
+                'client' => $vite_hmr_host . '/@vite/client',
+                'active' => $env !== 'production' && file_exists($vite_dev_path),
+            ],
+            'manifest' => [
+                'path' => $theme_path . '/dist/' . $vite_config['manifest'],
+            ],
         ];
     }
 
@@ -62,19 +59,19 @@ class Config
         return 'plugin' === $this->get('env.mode');
     }
 
-    private static function getViteServer(string $base_path): ?string
+    private static function getViteServer(string $path): string
     {
-        $path = $base_path . '/.dev';
+        $default = 'http://localhost:5173';
 
         if (! file_exists($path)) {
-            return null;
+            return $default;
         }
 
         $file = file_get_contents($path);
         [$key, $value] = explode('=', trim($file), 2);
 
         if ($key !== 'VITE_SERVER') {
-            return null;
+            return $default;
         }
 
         return $value;
