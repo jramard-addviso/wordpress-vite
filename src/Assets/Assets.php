@@ -20,6 +20,6 @@ class Assets
                 wp_enqueue_style("$name-deps-$key", $url, [], null);
             }
         }
-        wp_enqueue_script($name, $this->resolve($path), [], null);
+        wp_enqueue_script_module($name, $this->resolve($path), [], null);
     }
 }
