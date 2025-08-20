@@ -34,7 +34,7 @@ class Config
         ];
     }
 
-    public function get(string $key): array|string|bool|null
+    public function get(string $key)
     {
         $value = $this->config;
 
