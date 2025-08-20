@@ -34,7 +34,7 @@ class Config
         ];
     }
 
-    public function get(string $key): mixed
+    public function get(string $key): array|string|bool|null
     {
         $value = $this->config;
 
