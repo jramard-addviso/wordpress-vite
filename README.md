@@ -2,9 +2,11 @@
 
 A library to properly integrate a Vite workflow into WordPress.
 
-## Prerequisites
+## Requirements
 
-The npm module [vite-plugin-wordpress](https://github.com/jramard-addviso/vite-plugin-wordpress) is required for this library to work properly. Please ensure that it is installed before proceeding.
+- PHP 7.4 or higher;
+- WordPress 6.5 or higher;
+- A valid Vite configuration using the npm module [vite-plugin-wordpress](https://github.com/jramard-addviso/vite-plugin-wordpress).
 
 ## How it works
 
