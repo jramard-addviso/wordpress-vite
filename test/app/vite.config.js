@@ -6,7 +6,7 @@ const THEME_PATH = 'public/wp-content/themes/demo'
 
 export default defineConfig(({ mode }) => ({
   root: resolve(process.cwd(), THEME_PATH),
-  base: mode === 'production' ? '/themes/demo/dist/' : '/',
+  base: mode === 'production' ? '/wp-content/themes/demo/dist/' : '/',
   server: {
     cors: true,
   },
